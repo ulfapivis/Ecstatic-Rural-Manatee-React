@@ -114,10 +114,11 @@ const Home2 = (props) => {
         <div>
           <div className="home2-container4">
             <Script
-              html={`<script>
+              html={`<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
   // Import the Supabase client
-import { createClient } from '@supabase/supabase-js'
-
+//import { createClient } from '@supabase/supabase-js'
+const { createClient } = supabase
 // Initialize the Supabase client
 const supabaseUrl = 'https://qcqadjpoyyqfcwbqraln.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcWFkanBveXlxZmN3YnFyYWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxODc2MTgsImV4cCI6MjA0Mjc2MzYxOH0.uOqGQGQq_byg-bkYjYJsUyMNs41Lhrp_GWW9iEw85wM';
