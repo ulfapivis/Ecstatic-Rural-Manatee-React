@@ -13,49 +13,6 @@ const Home2 = (props) => {
         <title>Home2 - Ecstatic Rural Manatee</title>
         <meta property="og:title" content="Home2 - Ecstatic Rural Manatee" />
       </Helmet>
-      <div>
-        <div className="home2-container3">
-          <Script
-            html={`<script
-  async
-  crossorigin="anonymous"
-  data-clerk-publishable-key="pk_live_Y2xlcmsuYmticGxhbi5hcGl2aXMuY29tJA"
-  src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
-  type="text/javascript"
-></script>
-<script>
-  window.addEventListener('load', async function () {
-    await Clerk.load()
-
-    console.log('ClerkJS is loaded')
-  })
-</script>
-<script>
-  window.addEventListener('load', async function () {
-    await Clerk.load()
-
-    if (Clerk.user) {
-      document.getElementById('app').innerHTML = \`
-        <div id="user-button"></div>
-      \`
-
-      const userButtonDiv = document.getElementById('user-button')
-
-      Clerk.mountUserButton(userButtonDiv)
-    } else {
-      document.getElementById('app').innerHTML = \`
-        <div id="sign-in"></div>
-      \`
-
-      const signInDiv = document.getElementById('sign-in')
-
-      Clerk.mountSignIn(signInDiv)
-    }
-  })
-</script>`}
-          ></Script>
-        </div>
-      </div>
       <header data-thq="thq-navbar" className="home2-navbar-interactive">
         <img
           alt="logo"
@@ -131,37 +88,76 @@ const Home2 = (props) => {
           </div>
         </div>
       </header>
-      <Hero11
-        action1={
-          <Fragment>
-            <span className="home2-text22 thq-body-small">Main action</span>
-          </Fragment>
-        }
-        action2={
-          <Fragment>
-            <span className="home2-text23 thq-body-small">
-              Secondary action
-            </span>
-          </Fragment>
-        }
-        content1={
-          <Fragment>
-            <span className="home2-text24 thq-body-large">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </span>
-          </Fragment>
-        }
-        heading1={
-          <Fragment>
-            <span className="home2-text25 thq-heading-1">
-              Engaging hero headline for your website
-            </span>
-          </Fragment>
-        }
-      ></Hero11>
+      <div
+        id="protected-content"
+        style="display: none"
+        className="home2-container2"
+      >
+        <Hero11
+          action1={
+            <Fragment>
+              <span className="home2-text22 thq-body-small">Main action</span>
+            </Fragment>
+          }
+          action2={
+            <Fragment>
+              <span className="home2-text23 thq-body-small">
+                Secondary action
+              </span>
+            </Fragment>
+          }
+          content1={
+            <Fragment>
+              <span className="home2-text24 thq-body-large">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat.
+              </span>
+            </Fragment>
+          }
+          heading1={
+            <Fragment>
+              <span className="home2-text25 thq-heading-1">
+                Engaging hero headline for your website
+              </span>
+            </Fragment>
+          }
+        ></Hero11>
+        <div>
+          <div className="home2-container4">
+            <Script
+              html={`<script
+  async
+  crossorigin="anonymous"
+  data-clerk-publishable-key="pk_live_Y2xlcmsuYmticGxhbi5hcGl2aXMuY29tJA"
+  src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+  type="text/javascript"
+></script>
+<script>
+  window.addEventListener('load', async function () {
+    await Clerk.load()
+
+    console.log('ClerkJS is loaded')
+  })
+</script>
+<script>
+  window.addEventListener('load', async function () {
+    await Clerk.load()   
+
+Clerk.addListener('auth:change', (event) => {
+      const protectedContent = document.getElementById('protected-content');
+      if (event.isSignedIn) {
+        protectedContent.style.display = 'block';
+      } else {
+        protectedContent.style.display = 'none';
+      }
+    });
+</script>`}
+            ></Script>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
