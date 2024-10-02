@@ -130,15 +130,14 @@ const Home2 = (props) => {
 
         await Clerk.load();
 
-        Clerk.addListener('auth:change', (event) => {
-        const protectedContent = document.getElementById('protected-content');
-        if (event.isSignedIn) {
-          protectedContent.style.display = 'block';
-        } else {
-          protectedContent.style.display = 'none';
-        }
-      });
-    };
+      Clerk.addListener('auth:change', (event) => {
+      const protectedContent = document.getElementById('protected-content');
+      if (event.isSignedIn) {
+        protectedContent.style.display = 'block';
+      } else {
+        protectedContent.style.display = 'none';
+      }
+    });
   </script>`}
           ></Script>
         </div>
