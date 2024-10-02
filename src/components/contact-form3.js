@@ -17,20 +17,11 @@ const ContactForm3 = (props) => {
         </div>
         <div className="contact-form3-content1 thq-flex-column">
           <div className="contact-form3-section-title thq-card">
-            <span>
-              {props.content2 ?? (
-                <Fragment>
-                  <span className="contact-form3-text16 thq-body-small">
-                    Get in touch with us
-                  </span>
-                </Fragment>
-              )}
-            </span>
             <div className="contact-form3-content2">
               <h2>
                 {props.heading1 ?? (
                   <Fragment>
-                    <h2 className="contact-form3-text18 thq-heading-2">
+                    <h2 className="contact-form3-text7 thq-heading-2">
                       Projektplanerare
                     </h2>
                   </Fragment>
@@ -39,7 +30,7 @@ const ContactForm3 = (props) => {
               <span>
                 {props.content1 ?? (
                   <Fragment>
-                    <span className="contact-form3-text19 thq-body-small">
+                    <span className="contact-form3-text8 thq-body-small">
                       Skriv in uppgifter för projektet
                     </span>
                   </Fragment>
@@ -47,7 +38,15 @@ const ContactForm3 = (props) => {
               </span>
             </div>
           </div>
-          <form id="form1" name="form1" className="thq-card">
+          <form
+            id="form1"
+            name="form1"
+            enctype="application/x-www-form-urlencoded"
+            action="https://qcqadjpoyyqfcwbqraln.supabase.co"
+            method="POST"
+            supabaseKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcWFkanBveXlxZmN3YnFyYWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxODc2MTgsImV4cCI6MjA0Mjc2MzYxOH0.uOqGQGQq_byg-bkYjYJsUyMNs41Lhrp_GWW9iEw85wM"
+            className="thq-card"
+          >
             <div className="contact-form3-input1">
               <label htmlFor="contact-form-3-name" className="thq-body-small">
                 Projektnamn
@@ -96,7 +95,7 @@ const ContactForm3 = (props) => {
               <span>
                 {props.action ?? (
                   <Fragment>
-                    <span className="contact-form3-text17 thq-body-small">
+                    <span className="contact-form3-text6 thq-body-small">
                       Submit
                     </span>
                   </Fragment>
@@ -111,7 +110,6 @@ const ContactForm3 = (props) => {
 }
 
 ContactForm3.defaultProps = {
-  content2: undefined,
   action: undefined,
   imageAlt: 'Image1',
   imageSrc:
@@ -121,7 +119,6 @@ ContactForm3.defaultProps = {
 }
 
 ContactForm3.propTypes = {
-  content2: PropTypes.element,
   action: PropTypes.element,
   imageAlt: PropTypes.string,
   imageSrc: PropTypes.string,

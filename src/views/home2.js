@@ -90,28 +90,21 @@ const Home2 = (props) => {
       </header>
       <div id="protected-content" className="home2-container2">
         <ContactForm3
-          content2={
-            <Fragment>
-              <span className="home2-text22 thq-body-small">
-                Get in touch with us
-              </span>
-            </Fragment>
-          }
           action={
             <Fragment>
-              <span className="home2-text23 thq-body-small">Submit</span>
+              <span className="home2-text22 thq-body-small">Submit</span>
             </Fragment>
           }
           heading1={
             <Fragment>
-              <span className="home2-text24 thq-heading-2">
+              <span className="home2-text23 thq-heading-2">
                 Projektplanerare
               </span>
             </Fragment>
           }
           content1={
             <Fragment>
-              <span className="home2-text25 thq-body-small">
+              <span className="home2-text24 thq-body-small">
                 Skriv in uppgifter för projektet
               </span>
             </Fragment>
