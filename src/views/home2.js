@@ -122,42 +122,36 @@ const Home2 = (props) => {
           <div className="home2-container4">
             <Script
               html={`<script type="module">
-    import { createClient } from '@supabase/supabase-js';
+  // Import the Supabase client
+import { createClient } from '@supabase/supabase-js'
 
-    const supabaseUrl = 'https://qcqadjpoyyqfcwbqraln.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcWFkanBveXlxZmN3YnFyYWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxODc2MTgsImV4cCI6MjA0Mjc2MzYxOH0.uOqGQGQq_byg-bkYjYJsUyMNs41Lhrp_GWW9iEw85wM';
-    const supabase = createClient(supabaseUrl, supabaseKey);
+// Initialize the Supabase client
+const supabaseUrl = 'https://qcqadjpoyyqfcwbqraln.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcWFkanBveXlxZmN3YnFyYWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxODc2MTgsImV4cCI6MjA0Mjc2MzYxOH0.uOqGQGQq_byg-bkYjYJsUyMNs41Lhrp_GWW9iEw85wM';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
-    window.addEventListener('load', async function () {
-      await Clerk.load();
+// Function to handle form submission
+async function handleSubmit(event) {
+  event.preventDefault()
 
-      console.log('ClerkJS is loaded');
+  // Get form data
+  const formData = new FormData(event.target)
+  const data = Object.fromEntries(formData.entries())
 
-      const user = await Clerk.user;
+  // Insert data into Supabase
+  const { error } = await supabase
+    .from('projektplan')
+    .insert([data])
 
-      if (user) {
-        document.getElementById('protected-content').style.display = 'block';
-      } else {
-        document.getElementById('protected-content').style.display = 'none';
-      }
-    });
+  if (error) {
+    console.error('Error inserting data:', error)
+  } else {
+    console.log('Data inserted successfully')
+  }
+}
 
-    document.querySelector('form1').addEventListener('submit', async function (event) {
-      event.preventDefault();
-
-      const formData = new FormData(event.target);
-      const data = Object.fromEntries(formData.entries());
-
-      const { error } = await supabase
-        .from('projektplan')
-        .insert([data]);
-
-      if (error) {
-        console.error('Error inserting data:', error);
-      } else {
-        console.log('Data inserted successfully');
-      }
-    });
+// Add event listener to the form
+document.querySelector('form1').addEventListener('submit', handleSubmit)
   </script>`}
             ></Script>
           </div>
