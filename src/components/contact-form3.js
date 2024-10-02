@@ -95,7 +95,7 @@ document.querySelector('form1').addEventListener('submit', handleSubmit)
                 type="text"
                 id="form-1-projektnamn"
                 placeholder="Projektnamn"
-                name="projektnamn"
+                name="projnamn"
                 className="thq-input"
               />
             </div>
@@ -108,6 +108,8 @@ document.querySelector('form1').addEventListener('submit', handleSubmit)
                 id="form-1-projektstart"
                 required="true"
                 placeholder="Projektstart"
+                name="projektstart"
+                value="2024-09-01"
                 className="thq-input"
               />
             </div>
@@ -122,7 +124,7 @@ document.querySelector('form1').addEventListener('submit', handleSubmit)
                 id="contact-form-3-message"
                 rows="3"
                 placeholder="Skriv in uppgiften"
-                name="Uppgift"
+                name="uppgift"
                 className="thq-input"
               ></textarea>
             </div>

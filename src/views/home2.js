@@ -116,13 +116,57 @@ const Home2 = (props) => {
               </span>
             </Fragment>
           }
-          imageSrc="https://images.unsplash.com/photo-1727708248164-73450cd54f43?ixid=M3w5MTMyMXwwfDF8YWxsfDE4fHx8fHx8fHwxNzI3ODk0MDYyfA&amp;ixlib=rb-4.0.3&amp;w=1500"
+          imageSrc="https://images.unsplash.com/photo-1727708248164-73450cd54f43?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8YWxsfDE4fHx8fHx8fHwxNzI3ODk0MDYyfA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
         ></ContactForm3>
+        <div>
+          <div className="home2-container4">
+            <Script
+              html={`<script>
+    import { createClient } from '@supabase/supabase-js';
+
+    const supabaseUrl = 'https://qcqadjpoyyqfcwbqraln.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcWFkanBveXlxZmN3YnFyYWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxODc2MTgsImV4cCI6MjA0Mjc2MzYxOH0.uOqGQGQq_byg-bkYjYJsUyMNs41Lhrp_GWW9iEw85wM';
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    window.addEventListener('load', async function () {
+      await Clerk.load();
+
+      console.log('ClerkJS is loaded');
+
+      const user = await Clerk.user;
+
+      if (user) {
+        document.getElementById('protected-content').style.display = 'block';
+      } else {
+        document.getElementById('protected-content').style.display = 'none';
+      }
+    });
+
+    document.querySelector('form1').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData.entries());
+
+      const { error } = await supabase
+        .from('projektplan')
+        .insert([data]);
+
+      if (error) {
+        console.error('Error inserting data:', error);
+      } else {
+        console.log('Data inserted successfully');
+      }
+    });
+  </script>`}
+            ></Script>
+          </div>
+        </div>
       </div>
       <div>
-        <div className="home2-container4">
+        <div className="home2-container6">
           <Script
-            html={`<script type="module">
+            html={`<script>
   window.addEventListener('load', async function () {
     await Clerk.load();
 
