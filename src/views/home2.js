@@ -124,25 +124,33 @@ const Home2 = (props) => {
       <div>
         <div className="home2-container4">
           <Script
-            html={`  <script>
-    window.addEventListener('load', async function () {
-      console.log('ClerkJS is loaded');
-      try {
-        await Clerk.load();
+            html={`<script>
+  window.addEventListener('load', async function () {
+    await Clerk.load();
 
-        Clerk.addListener('auth:change', (event) => {
-          const protectedContent = document.getElementById('protected-content');
-          if (event.isSignedIn) {
-            protectedContent.style.display = 'block';
-          } else {
-            protectedContent.style.display = 'none';
-          }
-        });
-      } catch (error) {
-        console.error('ClerkJS load error:', error);
-      }
-    });
-  </script>`}
+    console.log('ClerkJS is loaded');
+
+    const user = await Clerk.user;
+
+    if (user) {
+      // User is logged in, show protected content
+      document.getElementById('protected-content').style.display = 'block';
+    } else {
+      // User is not logged in, hide protected content
+      document.getElementById('protected-content').style.display = 'none';
+    }
+  });
+</script>`}
+          ></Script>
+        </div>
+      </div>
+      <div>
+        <div className="home2-container6">
+          <Script
+            html={`<div id="protected-content" style="display: none;">
+  <!-- Your protected content goes here -->
+  <p>Welcome, you are logged in!</p>
+</div>`}
           ></Script>
         </div>
       </div>

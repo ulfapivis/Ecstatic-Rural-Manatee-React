@@ -164,6 +164,9 @@
 .home2-container4 {
   display: contents;
 }
+.home2-container6 {
+  display: contents;
+}
 @media(max-width: 767px) {
   .home2-navbar-interactive {
     padding-left: var(--dl-space-space-twounits);
