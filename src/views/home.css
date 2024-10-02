@@ -130,6 +130,10 @@
 }
 .home-login2 {
   margin-right: var(--dl-space-space-twounits);
+  text-decoration: none;
+}
+.home-register2 {
+  text-decoration: none;
 }
 .home-icon14 {
   width: var(--dl-size-size-xsmall);

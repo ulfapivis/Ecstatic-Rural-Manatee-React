@@ -67,8 +67,18 @@ const Home = (props) => {
               <span className="home-text19">Blog</span>
             </nav>
             <div className="home-buttons2">
-              <button className="home-login2 button">Login</button>
-              <button className="button">Register</button>
+              <a
+                href="https://accounts.bkbplan.apivis.com/sign-in"
+                className="home-login2 button"
+              >
+                Login
+              </a>
+              <a
+                href="https://accounts.bkbplan.apivis.com/sign-up"
+                className="home-register2 button"
+              >
+                Register
+              </a>
             </div>
           </div>
           <div>

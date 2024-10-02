@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
-import Hero11 from '../components/hero11'
+import ContactForm3 from '../components/contact-form3'
 import './home2.css'
 
 const Home2 = (props) => {
@@ -89,37 +89,35 @@ const Home2 = (props) => {
         </div>
       </header>
       <div id="protected-content" className="home2-container2">
-        <Hero11
-          action1={
+        <ContactForm3
+          content2={
             <Fragment>
-              <span className="home2-text22 thq-body-small">Main action</span>
+              <span className="home2-text22 thq-body-small">
+                Get in touch with us
+              </span>
             </Fragment>
           }
-          action2={
+          action={
             <Fragment>
-              <span className="home2-text23 thq-body-small">
-                Secondary action
+              <span className="home2-text23 thq-body-small">Submit</span>
+            </Fragment>
+          }
+          heading1={
+            <Fragment>
+              <span className="home2-text24 thq-heading-2">
+                Projektplanerare
               </span>
             </Fragment>
           }
           content1={
             <Fragment>
-              <span className="home2-text24 thq-body-large">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique. Duis
-                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                commodo diam libero vitae erat.
+              <span className="home2-text25 thq-body-small">
+                Skriv in uppgifter för projektet
               </span>
             </Fragment>
           }
-          heading1={
-            <Fragment>
-              <span className="home2-text25 thq-heading-1">
-                Engaging hero headline for your website
-              </span>
-            </Fragment>
-          }
-        ></Hero11>
+          imageSrc="https://images.unsplash.com/photo-1727708248164-73450cd54f43?ixid=M3w5MTMyMXwwfDF8YWxsfDE4fHx8fHx8fHwxNzI3ODk0MDYyfA&amp;ixlib=rb-4.0.3&amp;w=1500"
+        ></ContactForm3>
       </div>
       <div>
         <div className="home2-container4">
@@ -141,16 +139,6 @@ const Home2 = (props) => {
     }
   });
 </script>`}
-          ></Script>
-        </div>
-      </div>
-      <div>
-        <div className="home2-container6">
-          <Script
-            html={`<div id="protected-content" style="display: none;">
-  <!-- Your protected content goes here -->
-  <p>Welcome, you are logged in!</p>
-</div>`}
           ></Script>
         </div>
       </div>
