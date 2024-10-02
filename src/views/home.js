@@ -24,24 +24,20 @@ const Home = (props) => {
             <span className="home-text12">Pricing</span>
             <span className="home-text13">Team</span>
             <span className="home-text14">Blog</span>
+          </nav>
+          <div className="home-buttons1">
             <a
               href="https://accounts.bkbplan.apivis.com/sign-in"
-              className="home-link1"
+              className="home-login1 button"
             >
-              Login 
+              Login
             </a>
             <a
               href="https://accounts.bkbplan.apivis.com/sign-up"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="home-link2"
+              className="home-register1 button"
             >
-              Signup
+              Register
             </a>
-          </nav>
-          <div className="home-buttons1">
-            <button className="button">Login</button>
-            <button className="button">Register</button>
           </div>
         </div>
         <div data-thq="thq-burger-menu" className="home-burger-menu">

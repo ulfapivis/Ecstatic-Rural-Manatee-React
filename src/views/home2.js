@@ -26,10 +26,10 @@ const Home2 = (props) => {
             <span className="home2-text13">Team</span>
             <span className="home2-text14">Blog</span>
             <a
-              href="https://accounts.https://bkbplan.apivis.com/sign-in"
+              href="https://accounts.bkbplan.apivis.com/user"
               className="home2-link"
             >
-              <span>Logout</span>
+              <span>Account</span>
               <br></br>
             </a>
           </nav>
@@ -88,20 +88,20 @@ const Home2 = (props) => {
             <span className="home2-text22 thq-body-small">Main action</span>
           </Fragment>
         }
+        action2={
+          <Fragment>
+            <span className="home2-text23 thq-body-small">
+              Secondary action
+            </span>
+          </Fragment>
+        }
         content1={
           <Fragment>
-            <span className="home2-text23 thq-body-large">
+            <span className="home2-text24 thq-body-large">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat.
-            </span>
-          </Fragment>
-        }
-        action2={
-          <Fragment>
-            <span className="home2-text24 thq-body-small">
-              Secondary action
             </span>
           </Fragment>
         }
