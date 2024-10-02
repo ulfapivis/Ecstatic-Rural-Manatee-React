@@ -132,18 +132,17 @@ const Home2 = (props) => {
   })
 
   window.onload = function() {
-      console.log('ClerkJS is loaded');
-      Clerk.load({
-        frontendApi: 'your-frontend-api'
-      });
-
-      Clerk.addListener('auth:change', (event) => {
+      
+        Clerk.addListener('auth:change', (event) => {
         const protectedContent = document.getElementById('protected-content');
         if (event.isSignedIn) {
           protectedContent.style.display = 'block';
         } else {
           protectedContent.style.display = 'none';
         }
+      });
+            }).catch((error) => {
+        console.error('ClerkJS load error:', error);
       });
     };
   </script>`}
