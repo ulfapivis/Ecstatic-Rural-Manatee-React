@@ -25,13 +25,13 @@ const Home = (props) => {
             <span className="home-text13">Team</span>
             <span className="home-text14">Blog</span>
             <a
-              href="https://accounts.https://bkbplan.apivis.com/sign-in"
+              href="https://accounts.bkbplan.apivis.com/sign-in"
               className="home-link1"
             >
               Login 
             </a>
             <a
-              href="https://accounts.https://bkbplan.apivis.com/sign-up"
+              href="https://accounts.bkbplan.apivis.com/sign-up"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link2"
