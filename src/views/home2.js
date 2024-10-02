@@ -90,7 +90,7 @@ const Home2 = (props) => {
       </header>
       <div
         id="protected-content"
-        style="display: none"
+        style="display: none;"
         className="home2-container2"
       >
         <Hero11
