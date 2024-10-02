@@ -122,7 +122,7 @@ const Home2 = (props) => {
       <div>
         <div className="home2-container4">
           <Script
-            html={`<script>
+            html={`<script type="module">
   window.addEventListener('load', async function () {
     await Clerk.load();
 
