@@ -13,6 +13,49 @@ const Home2 = (props) => {
         <title>Home2 - Ecstatic Rural Manatee</title>
         <meta property="og:title" content="Home2 - Ecstatic Rural Manatee" />
       </Helmet>
+      <div>
+        <div className="home2-container3">
+          <Script
+            html={`<script
+  async
+  crossorigin="anonymous"
+  data-clerk-publishable-key="pk_test_YWxpdmUtYW1vZWJhLTYzLmNsZXJrLmFjY291bnRzLmRldiQ"
+  src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+  type="text/javascript"
+></script>
+<script>
+  window.addEventListener('load', async function () {
+    await Clerk.load()
+
+    console.log('ClerkJS is loaded')
+  })
+</script>
+<script>
+  window.addEventListener('load', async function () {
+    await Clerk.load()
+
+    if (Clerk.user) {
+      document.getElementById('app').innerHTML = \`
+        <div id="user-button"></div>
+      \`
+
+      const userButtonDiv = document.getElementById('user-button')
+
+      Clerk.mountUserButton(userButtonDiv)
+    } else {
+      document.getElementById('app').innerHTML = \`
+        <div id="sign-in"></div>
+      \`
+
+      const signInDiv = document.getElementById('sign-in')
+
+      Clerk.mountSignIn(signInDiv)
+    }
+  })
+</script>`}
+          ></Script>
+        </div>
+      </div>
       <header data-thq="thq-navbar" className="home2-navbar-interactive">
         <img
           alt="logo"
@@ -28,6 +71,7 @@ const Home2 = (props) => {
             <span className="home2-text14">Blog</span>
             <a
               href="https://accounts.bkbplan.apivis.com/user"
+              id="user-button"
               className="home2-link"
             >
               <span>Account</span>
@@ -35,8 +79,12 @@ const Home2 = (props) => {
             </a>
           </nav>
           <div className="home2-buttons1">
-            <button className="button">Login</button>
-            <button className="button">Register</button>
+            <button id="sign-in" className="button">
+              Login
+            </button>
+            <button id="sign-up" className="button">
+              Register
+            </button>
           </div>
         </div>
         <div data-thq="thq-burger-menu" className="home2-burger-menu">
@@ -114,26 +162,6 @@ const Home2 = (props) => {
           </Fragment>
         }
       ></Hero11>
-      <div>
-        <div className="home2-container3">
-          <Script
-            html={`<script
-  async
-  crossorigin="anonymous"
-  data-clerk-publishable-key="pk_test_YWxpdmUtYW1vZWJhLTYzLmNsZXJrLmFjY291bnRzLmRldiQ"
-  src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
-  type="text/javascript"
-></script>
-<script>
-  window.addEventListener('load', async function () {
-    await Clerk.load()
-
-    console.log('ClerkJS is loaded')
-  })
-</script>`}
-          ></Script>
-        </div>
-      </div>
     </div>
   )
 }
