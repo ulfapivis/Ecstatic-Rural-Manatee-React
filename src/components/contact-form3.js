@@ -42,9 +42,7 @@ const ContactForm3 = (props) => {
             id="form1"
             name="form1"
             enctype="application/x-www-form-urlencoded"
-            action="https://qcqadjpoyyqfcwbqraln.supabase.co"
             method="POST"
-            supabaseKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjcWFkanBveXlxZmN3YnFyYWxuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxODc2MTgsImV4cCI6MjA0Mjc2MzYxOH0.uOqGQGQq_byg-bkYjYJsUyMNs41Lhrp_GWW9iEw85wM"
             className="thq-card"
           >
             <div className="contact-form3-input1">
