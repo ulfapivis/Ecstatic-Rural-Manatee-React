@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 
+import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
 import Hero11 from '../components/hero11'
@@ -7,7 +8,7 @@ import './home2.css'
 
 const Home2 = (props) => {
   return (
-    <div id="app" className="home2-container">
+    <div id="app" className="home2-container1">
       <Helmet>
         <title>Home2 - Ecstatic Rural Manatee</title>
         <meta property="og:title" content="Home2 - Ecstatic Rural Manatee" />
@@ -113,6 +114,26 @@ const Home2 = (props) => {
           </Fragment>
         }
       ></Hero11>
+      <div>
+        <div className="home2-container3">
+          <Script
+            html={`<script
+  async
+  crossorigin="anonymous"
+  data-clerk-publishable-key="pk_test_YWxpdmUtYW1vZWJhLTYzLmNsZXJrLmFjY291bnRzLmRldiQ"
+  src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+  type="text/javascript"
+></script>
+<script>
+  window.addEventListener('load', async function () {
+    await Clerk.load()
+
+    console.log('ClerkJS is loaded')
+  })
+</script>`}
+          ></Script>
+        </div>
+      </div>
     </div>
   )
 }
