@@ -127,23 +127,12 @@ const Home2 = (props) => {
         <div>
           <div className="home2-container4">
             <Script
-              html={`<script
-  async
-  crossorigin="anonymous"
-  data-clerk-publishable-key="pk_live_Y2xlcmsuYmticGxhbi5hcGl2aXMuY29tJA"
-  src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
-  type="text/javascript"
-></script>
-<script>
+              html={`<script>
   window.addEventListener('load', async function () {
     await Clerk.load()
 
     console.log('ClerkJS is loaded')
   })
-</script>
-<script>
-  window.addEventListener('load', async function () {
-    await Clerk.load()   
 
 Clerk.addListener('auth:change', (event) => {
       const protectedContent = document.getElementById('protected-content');
