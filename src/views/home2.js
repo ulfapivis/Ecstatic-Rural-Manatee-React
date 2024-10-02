@@ -88,11 +88,7 @@ const Home2 = (props) => {
           </div>
         </div>
       </header>
-      <div
-        id="protected-content"
-        style="display: none;"
-        className="home2-container2"
-      >
+      <div id="protected-content" className="home2-container2">
         <Hero11
           action1={
             <Fragment>
@@ -124,10 +120,11 @@ const Home2 = (props) => {
             </Fragment>
           }
         ></Hero11>
-        <div>
-          <div className="home2-container4">
-            <Script
-              html={`<script>
+      </div>
+      <div>
+        <div className="home2-container4">
+          <Script
+            html={`<script>
   window.addEventListener('load', async function () {
     await Clerk.load()
 
@@ -143,8 +140,7 @@ Clerk.addListener('auth:change', (event) => {
       }
     });
 </script>`}
-            ></Script>
-          </div>
+          ></Script>
         </div>
       </div>
     </div>
