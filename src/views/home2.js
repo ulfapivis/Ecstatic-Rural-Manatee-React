@@ -19,7 +19,7 @@ const Home2 = (props) => {
             html={`<script
   async
   crossorigin="anonymous"
-  data-clerk-publishable-key="pk_test_YWxpdmUtYW1vZWJhLTYzLmNsZXJrLmFjY291bnRzLmRldiQ"
+  data-clerk-publishable-key="pk_live_Y2xlcmsuYmticGxhbi5hcGl2aXMuY29tJA"
   src="https://alive-amoeba-63.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
   type="text/javascript"
 ></script>
