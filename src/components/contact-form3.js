@@ -21,7 +21,7 @@ const ContactForm3 = (props) => {
               <h2>
                 {props.heading1 ?? (
                   <Fragment>
-                    <h2 className="contact-form3-text7 thq-heading-2">
+                    <h2 className="contact-form3-text6 thq-heading-2">
                       Projektplanerare
                     </h2>
                   </Fragment>
@@ -41,8 +41,8 @@ const ContactForm3 = (props) => {
           <form
             id="form1"
             name="form1"
-            enctype="application/x-www-form-urlencoded"
             method="POST"
+            enctype="application/x-www-form-urlencoded"
             className="thq-card"
           >
             <div className="contact-form3-input1">
@@ -52,8 +52,8 @@ const ContactForm3 = (props) => {
               <input
                 type="text"
                 id="form-1-projektnamn"
-                placeholder="Projektnamn"
                 name="projnamn"
+                placeholder="Projektnamn"
                 className="thq-input"
               />
             </div>
@@ -64,10 +64,10 @@ const ContactForm3 = (props) => {
               <input
                 type="datetime-local"
                 id="form-1-projektstart"
-                required="true"
-                placeholder="Projektstart"
                 name="projektstart"
                 value="2024-09-01"
+                required="true"
+                placeholder="Projektstart"
                 className="thq-input"
               />
             </div>
@@ -80,9 +80,9 @@ const ContactForm3 = (props) => {
               </label>
               <textarea
                 id="contact-form-3-message"
+                name="uppgift"
                 rows="3"
                 placeholder="Skriv in uppgiften"
-                name="uppgift"
                 className="thq-input"
               ></textarea>
             </div>
@@ -93,7 +93,7 @@ const ContactForm3 = (props) => {
               <span>
                 {props.action ?? (
                   <Fragment>
-                    <span className="contact-form3-text6 thq-body-small">
+                    <span className="contact-form3-text7 thq-body-small">
                       Submit
                     </span>
                   </Fragment>
@@ -108,20 +108,20 @@ const ContactForm3 = (props) => {
 }
 
 ContactForm3.defaultProps = {
+  heading1: undefined,
   action: undefined,
-  imageAlt: 'Image1',
   imageSrc:
     'https://images.unsplash.com/photo-1574169208507-84376144848b?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDN8fGFic3RyYWN0fGVufDB8fHx8MTcxMDg3MDkzMHww&ixlib=rb-4.0.3&w=700',
-  heading1: undefined,
   content1: undefined,
+  imageAlt: 'Image1',
 }
 
 ContactForm3.propTypes = {
-  action: PropTypes.element,
-  imageAlt: PropTypes.string,
-  imageSrc: PropTypes.string,
   heading1: PropTypes.element,
+  action: PropTypes.element,
+  imageSrc: PropTypes.string,
   content1: PropTypes.element,
+  imageAlt: PropTypes.string,
 }
 
 export default ContactForm3

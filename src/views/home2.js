@@ -95,17 +95,17 @@ const Home2 = (props) => {
               <span className="home2-text22 thq-body-small">Submit</span>
             </Fragment>
           }
-          heading1={
+          content1={
             <Fragment>
-              <span className="home2-text23 thq-heading-2">
-                Projektplanerare
+              <span className="home2-text23 thq-body-small">
+                Skriv in uppgifter för projektet
               </span>
             </Fragment>
           }
-          content1={
+          heading1={
             <Fragment>
-              <span className="home2-text24 thq-body-small">
-                Skriv in uppgifter för projektet
+              <span className="home2-text24 thq-heading-2">
+                Projektplanerare
               </span>
             </Fragment>
           }
@@ -114,7 +114,7 @@ const Home2 = (props) => {
         <div>
           <div className="home2-container4">
             <Script
-              html={`<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+              html={`
 <script>
   // Import the Supabase client
 //import { createClient } from '@supabase/supabase-js'
