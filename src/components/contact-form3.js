@@ -65,7 +65,6 @@ const ContactForm3 = (props) => {
                 type="datetime-local"
                 id="form-1-projektstart"
                 name="projektstart"
-                value="2024-09-01"
                 required="true"
                 placeholder="Projektstart"
                 className="thq-input"
