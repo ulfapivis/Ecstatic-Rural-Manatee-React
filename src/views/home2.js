@@ -124,11 +124,11 @@ const Home2 = (props) => {
       <div>
         <div className="home2-container4">
           <Script
-            html={`  <script>
+            html={`<script>
     window.addEventListener('load', async function () {
       console.log('ClerkJS is loaded');
       try {
-        await Clerk.mount();
+        await Clerk.load();
 
         Clerk.addListener('auth:change', (event) => {
           const protectedContent = document.getElementById('protected-content');
