@@ -121,7 +121,7 @@ const Home2 = (props) => {
         <div>
           <div className="home2-container4">
             <Script
-              html={`<script>
+              html={`<script type="module">
     import { createClient } from '@supabase/supabase-js';
 
     const supabaseUrl = 'https://qcqadjpoyyqfcwbqraln.supabase.co';

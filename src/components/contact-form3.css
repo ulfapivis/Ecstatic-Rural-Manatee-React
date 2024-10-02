@@ -18,9 +18,6 @@
   max-width: 640px;
   border-radius: var(--dl-radius-radius-radius4);
 }
-.contact-form3-container3 {
-  display: contents;
-}
 .contact-form3-content1 {
   gap: 0;
   flex: 1;
@@ -52,7 +49,7 @@
   align-self: stretch;
   flex-direction: column;
 }
-.contact-form3-container4 {
+.contact-form3-container2 {
   gap: var(--dl-space-space-halfunit);
   display: flex;
   align-items: flex-start;
