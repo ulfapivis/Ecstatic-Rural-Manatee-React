@@ -127,7 +127,7 @@ const Home2 = (props) => {
             html={`<script>
     window.addEventListener('load', async function () {
       console.log('ClerkJS is loaded');
-      try {
+
         await Clerk.load();
 
         Clerk.addListener('auth:change', (event) => {
